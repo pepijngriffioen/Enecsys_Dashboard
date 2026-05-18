@@ -1,0 +1,23 @@
+services:
+  app:
+    image: local/enecsys-php:8.2
+    ports:
+      - "8080:80"
+    # volumes:
+    #   - .:/var/www/html
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      ENECSYS_DBNAME: enecsys_71a69a
+      ENECSYS_USERNAME: enecsys_71a69a 
+      ENECSYS_DB_PASSWORD: 0ebfa01d78772c6c
+    depends_on:
+      - db
+
+  db:
+    image: local/enecsys-mariadb:10.6
+    environment:
+      # MYSQL_DATABASE: app
+      MYSQL_ROOT_PASSWORD: root
+      ENECSYS_DBNAME: enecsys_71a69a
+      ENECSYS_USERNAME: enecsys_71a69a 
+      ENECSYS_DB_PASSWORD: 0ebfa01d78772c6c
