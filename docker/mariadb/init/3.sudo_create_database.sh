@@ -3,11 +3,11 @@
 # run as: sudo
 
 #set Database name
-ENECSYS_DBPREFIX="enecsys"
-ENECYS_DB="$(openssl rand -hex 3)"
-ENECSYS_DBNAME=$ENECSYS_DBPREFIX"_"$ENECYS_DB
-ENECSYS_USERNAME=$ENECSYS_DBPREFIX"_"$ENECYS_DB
-ENECSYS_DB_PASSWORD="$(openssl rand -hex 8)"
+# ENECSYS_DBPREFIX="enecsys"
+# ENECYS_DB="$(openssl rand -hex 3)"
+# ENECSYS_DBNAME=$ENECSYS_DBPREFIX"_"$ENECYS_DB
+# ENECSYS_USERNAME=$ENECSYS_DBPREFIX"_"$ENECYS_DB
+# ENECSYS_DB_PASSWORD="$(openssl rand -hex 8)"
 
 # echo -n "Enter the MySQL root password:"
 # read MYSQL_ROOT_PASSWORD
@@ -24,7 +24,7 @@ fi
 echo "The database, username and password will be created"
 sleep 2
 
-db="create database $ENECSYS_DBNAME;GRANT ALL PRIVILEGES ON $ENECSYS_DBNAME.* TO $ENECSYS_USERNAME@localhost IDENTIFIED BY '$ENECSYS_DB_PASSWORD';FLUSH PRIVILEGES;"
+db="create database $ENECSYS_DBNAME;GRANT ALL PRIVILEGES ON $ENECSYS_DBNAME.* TO '$ENECSYS_USERNAME'@'%' IDENTIFIED BY '$ENECSYS_DB_PASSWORD';FLUSH PRIVILEGES;"
 mysql -u root -p$MYSQL_ROOT_PASSWORD -e "$db"
 
 if [ $? != "0" ]; then

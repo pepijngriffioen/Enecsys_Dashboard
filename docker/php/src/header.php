@@ -8,20 +8,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?php echo $LANG_DASHBOARD_TITLE; ?></title>
-    <link rel="icon" type="image/x-icon" href="<?php echo $DOCUMENT_ROOT;?>/img/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
     <!-- Bootstrap core CSS -->
-    <link href="<?php echo $DOCUMENT_ROOT;?>/css/bootstrap.min.css" rel="stylesheet">
-    <link href="<?php echo $DOCUMENT_ROOT;?>/fonts/css/font-awesome.min.css" rel="stylesheet">
-    <link href="<?php echo $DOCUMENT_ROOT;?>/css/animate.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/fonts/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/animate.min.css" rel="stylesheet">
     <!-- Custom styling plus plugins -->
-    <link href="<?php echo $DOCUMENT_ROOT;?>/css/custom.css" rel="stylesheet">
-    <link href="<?php echo $DOCUMENT_ROOT;?>/css/maps/jquery-jvectormap-2.0.1.css" rel="stylesheet" />
-    <link href="<?php echo $DOCUMENT_ROOT;?>/css/icheck/flat/green.css" rel="stylesheet" />
-    <link href="<?php echo $DOCUMENT_ROOT;?>/css/floatexamples.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo $DOCUMENT_ROOT;?>/css/datatables/tools/css/dataTables.tableTools.css" rel="stylesheet">
+    <link href="/css/custom.css" rel="stylesheet">
+    <link href="/css/maps/jquery-jvectormap-2.0.1.css" rel="stylesheet" />
+    <link href="/css/icheck/flat/green.css" rel="stylesheet" />
+    <link href="/css/floatexamples.css" rel="stylesheet" type="text/css" />
+    <link href="/css/datatables/tools/css/dataTables.tableTools.css" rel="stylesheet">
     <!-- Bootstrap Form Helpers -->
-    <link href="<?php echo $DOCUMENT_ROOT;?>/css/bootstrap-form-helpers.min.css" rel="stylesheet" media="screen">
-    <script src="<?php echo $DOCUMENT_ROOT;?>/js/jquery.min.js"></script>
+    <link href="/css/bootstrap-form-helpers.min.css" rel="stylesheet" media="screen">
+    <script src="/js/jquery.min.js"></script>
     <!--[if lt IE 9]>
         <script src="../assets/js/ie8-responsive-file-warning.js"></script>
         <![endif]-->

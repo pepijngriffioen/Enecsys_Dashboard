@@ -16,21 +16,21 @@
 	<div id="notif-group" class="tabbed_notifications"></div>
 </div>
 
-<script src="<?php echo $DOCUMENT_ROOT;?>/js/bootstrap.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
 
 <!-- bootstrap progress js -->
-<script src="<?php echo $DOCUMENT_ROOT; ?>/js/progressbar/bootstrap-progressbar.min.js"></script>
-<script src="<?php echo $DOCUMENT_ROOT; ?>/js/nicescroll/jquery.nicescroll.min.js"></script>
+<script src="/js/progressbar/bootstrap-progressbar.min.js"></script>
+<script src="/js/nicescroll/jquery.nicescroll.min.js"></script>
 
-<script src="<?php echo $DOCUMENT_ROOT; ?>/js/highcharts/highcharts.js"></script>
-<script src="<?php echo $DOCUMENT_ROOT; ?>/js/highcharts/modules/exporting.js"></script>
+<script src="/js/highcharts/highcharts.js"></script>
+<script src="/js/highcharts/modules/exporting.js"></script>
 
 <!-- icheck -->
-<script src="<?php echo $DOCUMENT_ROOT; ?>/js/icheck/icheck.min.js"></script>
+<script src="/js/icheck/icheck.min.js"></script>
 <!-- daterangepicker -->
-<script type="text/javascript" src="<?php echo $DOCUMENT_ROOT; ?>/js/moment.min2.js"></script>
-<script type="text/javascript" src="<?php echo $DOCUMENT_ROOT; ?>/js/datepicker/daterangepicker.js"></script>
-<script type="text/javascript" src="<?php echo $DOCUMENT_ROOT; ?>/js/bootstrap-formhelpers.js"></script>
+<script type="text/javascript" src="/js/moment.min2.js"></script>
+<script type="text/javascript" src="/js/datepicker/daterangepicker.js"></script>
+<script type="text/javascript" src="/js/bootstrap-formhelpers.js"></script>
 
 <script type="text/javascript">
 $(document).ready(function () {
@@ -45,11 +45,11 @@ $('#build_date').daterangepicker({
 });
 </script>
 <!-- sparkline -->
-<script src="<?php echo $DOCUMENT_ROOT;?>/js/sparkline/jquery.sparkline.min.js"></script>
-<script src="<?php echo $DOCUMENT_ROOT;?>/js/custom.js"></script>
+<script src="/js/sparkline/jquery.sparkline.min.js"></script>
+<script src="/js/custom.js"></script>
 
 <!-- validator -->
-<script src="<?php echo $DOCUMENT_ROOT;?>/js/validator/validator.js"></script>
+<script src="/js/validator/validator.js"></script>
 <script>
   // initialize the validator function
         validator.message['date'] = 'not a real date';
@@ -94,7 +94,7 @@ $('#build_date').daterangepicker({
     </script>
 
 <!-- skycons -->
-<script src="<?php echo $DOCUMENT_ROOT; ?>/js/skycons/skycons.js"></script>
+<script src="/js/skycons/skycons.js"></script>
 
 
 </body>

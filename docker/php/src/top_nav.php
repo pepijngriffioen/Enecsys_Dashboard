@@ -12,12 +12,12 @@ $AllAlerts = mysqli_query($connect,"select device, note_short, img_url, last_che
 	<ul class="nav navbar-nav navbar-right">
 		<li class="">
 				<a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-						<img src="<?php echo $DOCUMENT_ROOT;?>/img/coffee.png" alt=""><?php echo $_SESSION['user']; ?>
+						<img src="/img/coffee.png" alt=""><?php echo $_SESSION['user']; ?>
 						<span class=" fa fa-angle-down"></span>
 				</a>
 				<ul class="dropdown-menu dropdown-usermenu animated fadeInDown pull-right">
 					<li>
-						<a href="<?php echo $DOCUMENT_ROOT;?>/logout.php"><i class="fa fa-sign-out pull-right"></i> <?php echo $LANG_TOPNAV_LOGOUT;?></a>
+						<a href="/logout.php"><i class="fa fa-sign-out pull-right"></i> <?php echo $LANG_TOPNAV_LOGOUT;?></a>
 					</li>
 				</ul>
 			</li>
