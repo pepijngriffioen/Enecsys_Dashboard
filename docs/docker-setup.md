@@ -43,5 +43,7 @@ Once finished, you should be able to login.
 ## Open points
 
 - [ ] Fix cron jobs
+  - [x] add a pi user, and introduce the cron jobs via the entrypoint.sh
+  - [ ] validate cron jobs
 - [ ] Get rid of the warnings
 - [ ] Fix the header location
