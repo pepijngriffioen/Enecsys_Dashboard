@@ -45,5 +45,5 @@ Once finished, you should be able to login.
 - [ ] Fix cron jobs
   - [x] add a pi user, and introduce the cron jobs via the entrypoint.sh
   - [ ] validate cron jobs
-- [ ] Get rid of the warnings
-- [ ] Fix the header location
+- [x] Get rid of the warnings
+- [x] Fix the header location
