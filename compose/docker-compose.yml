@@ -3,13 +3,16 @@ services:
     image: local/enecsys-php:8.2
     ports:
       - "8080:80"
-    # volumes:
+    volumes:
+      - php_data/php/:/var/www/html
     #   - ../docker/php/src/:/var/www/html
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      ENECSYS_DBNAME: enecsys_71a69a
-      ENECSYS_USERNAME: enecsys_71a69a
-      ENECSYS_DB_PASSWORD: 0ebfa01d78772c6c
+    env_file:
+      - .env
+    # environment:
+    #   MYSQL_ROOT_PASSWORD: root
+    #   ENECSYS_DBNAME: enecsys_71a69a
+    #   ENECSYS_USERNAME: enecsys_71a69a
+    #   ENECSYS_DB_PASSWORD: 0ebfa01d78772c6c
     depends_on:
       - db
 
@@ -17,9 +20,17 @@ services:
     image: local/enecsys-mariadb:10.6
     ports:
       - "3306:3306"
-    environment:
-      # MYSQL_DATABASE: app
-      MYSQL_ROOT_PASSWORD: root
-      ENECSYS_DBNAME: enecsys_71a69a
-      ENECSYS_USERNAME: enecsys_71a69a
-      ENECSYS_DB_PASSWORD: 0ebfa01d78772c6c
+    volumes:
+      - mariadb_data:/var/lib/mysql
+      # - /var/docker/mariadb/conf:/etc/mysql
+    env_file:
+        - .env
+    # environment:
+    #   # MYSQL_DATABASE: app
+    #   MYSQL_ROOT_PASSWORD: root
+    #   ENECSYS_DBNAME: enecsys_71a69a
+    #   ENECSYS_USERNAME: enecsys_71a69a
+    #   ENECSYS_DB_PASSWORD: 0ebfa01d78772c6c
+volumes:
+  php_data:
+  mariadb_data:
