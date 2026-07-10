@@ -4,7 +4,7 @@
 
 #set Database name
 # ENECSYS_DBPREFIX="enecsys"
-# ENECYS_DB="$(openssl rand -hex 3)"
+# ENECSYS_DB="$(openssl rand -hex 3)"
 # ENECSYS_DBNAME=$ENECSYS_DBPREFIX"_"$ENECYS_DB
 # ENECSYS_USERNAME=$ENECSYS_DBPREFIX"_"$ENECYS_DB
 # ENECSYS_DB_PASSWORD="$(openssl rand -hex 8)"
