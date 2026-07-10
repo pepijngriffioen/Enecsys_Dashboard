@@ -8,11 +8,6 @@ services:
     #   - ../docker/php/src/:/var/www/html
     env_file:
       - .env
-    # environment:
-    #   MYSQL_ROOT_PASSWORD: root
-    #   ENECSYS_DBNAME: enecsys_71a69a
-    #   ENECSYS_USERNAME: enecsys_71a69a
-    #   ENECSYS_DB_PASSWORD: 0ebfa01d78772c6c
     depends_on:
       - db
 
@@ -22,15 +17,8 @@ services:
       - "3306:3306"
     volumes:
       - mariadb_data:/var/lib/mysql
-      # - /var/docker/mariadb/conf:/etc/mysql
     env_file:
         - .env
-    # environment:
-    #   # MYSQL_DATABASE: app
-    #   MYSQL_ROOT_PASSWORD: root
-    #   ENECSYS_DBNAME: enecsys_71a69a
-    #   ENECSYS_USERNAME: enecsys_71a69a
-    #   ENECSYS_DB_PASSWORD: 0ebfa01d78772c6c
 volumes:
   php_data:
   mariadb_data:
