@@ -28,7 +28,7 @@ Sign in with your password.
 
 ### Raspi config - Advanced options
 
-After logging in via SSH we change some basic settings. 
+After logging in via SSH we change some basic settings.
 
 run this command:
 
@@ -46,7 +46,6 @@ Interacting with the screen? Arrow keys, TAB, spacebar and ENTER key.
 ![Raspi config](images/13.jpg)
 
 ![Raspi config](images/14.jpg)
-
 
 We will reboot after all steps are complete.
 
@@ -116,6 +115,9 @@ cd ~
 
 # for now using the repo from pepijn
 git clone https://github.com/pepijngriffioen/Enecsys_Dashboard.git
+
+# feature branch
+git checkout feat/docker
 ```
 
 Add the static ip:
@@ -166,13 +168,17 @@ Now wait till you see the database credentials. In the logs. You can also store 
 
 ## Access the application
 
-Since I gave the rpi a hostname, we can use it go to: http://rpi-enecsys:8080
+Since I gave the rpi a hostname, we can use it go to: <http://rpi-enecsys:8080>
 
 Or use your IP address, in my case: 192.168.1.185:8080
 
 Here you will see an error, because the connection file has not been created. Let's generate it.
 
-http://rpi-enecsys:8080/install_process.php
+<http://rpi-enecsys:8080/install_process.php>
+
+## Setup the Inverters
+
+See the notes from earlier [install.md](../installation/INSTALL.md)
 
 ## Danger zone: delete the data
 
