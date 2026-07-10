@@ -4,7 +4,7 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - php_data/php/:/var/www/html
+      - php_data:/var/www/html
     #   - ../docker/php/src/:/var/www/html
     env_file:
       - .env
