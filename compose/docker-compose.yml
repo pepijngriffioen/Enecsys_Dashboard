@@ -9,6 +9,7 @@ services:
     #   - ../docker/php/src/:/var/www/html
     env_file:
       - .env
+    restart: unless-stopped
     depends_on:
       - db
 
@@ -20,6 +21,7 @@ services:
       - mariadb_data:/var/lib/mysql
     env_file:
         - .env
+    restart: unless-stopped
 volumes:
   php_data:
   mariadb_data:
