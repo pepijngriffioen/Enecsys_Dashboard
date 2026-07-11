@@ -131,6 +131,7 @@ sudo reboot
 Build the local containers:
 
 ```bash
+cd Enecsys_Dashboard
 sudo make app
 sudo make db
 ```
