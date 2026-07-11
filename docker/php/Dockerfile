@@ -4,7 +4,7 @@ ARG UID=1000
 ARG GID=$UID
 ARG NAME=pi
 
-RUN docker-php-ext-install pdo_mysql mysqli
+RUN docker-php-ext-install pdo_mysql mysqli sockets
 
 RUN apt-get update && apt-get install -y cron \
   && apt autoremove -yqq --purge \
