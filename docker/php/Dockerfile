@@ -9,7 +9,8 @@ RUN docker-php-ext-install pdo_mysql mysqli sockets
 RUN apt-get update && apt-get install -y cron \
   && apt autoremove -yqq --purge \
   && apt clean \
-  && rm -rf /var/lib/apt/lists/*
+  && rm -rf /var/lib/apt/lists/* \
+  && chmod u+s /usr/sbin/cron
 
 
 # Setup a non-root user
