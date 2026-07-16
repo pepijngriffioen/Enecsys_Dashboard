@@ -25,12 +25,12 @@ crontab -u pi -l | grep -v 'backupFiles.php' | crontab -u pi -
 crontab -u pi -l | grep -v 'backupDB.php' | crontab -u pi -
 crontab -u pi -l | grep -v 'cleanFiles.php' | crontab -u pi -
 
-#check if cronjob exists, otherwise create it
-CMD="sleep 60 && cd /var/www/html/e2pv/; php /var/www/html/e2pv/e2pv.php"
-JOB="@reboot $CMD"
-TMPC="mycron1"
-grep "$CMD" -q <(crontab -l) || (crontab -l>"$TMPC"; echo "$JOB">>"$TMPC"; crontab "$TMPC")
-rm mycron1
+#check if cronjob exists, otherwise create it - moved to running php process
+# CMD="sleep 60 && cd /var/www/html/e2pv/; php /var/www/html/e2pv/e2pv.php"
+# JOB="@reboot $CMD"
+# TMPC="mycron1"
+# grep "$CMD" -q <(crontab -l) || (crontab -l>"$TMPC"; echo "$JOB">>"$TMPC"; crontab "$TMPC")
+# rm mycron1
 
 #check if cronjob exists, otherwise create it
 CMD="cd /var/www/html/cron/; php /var/www/html/cron/cron_nightly_reports.php"
@@ -85,6 +85,16 @@ rm mycron8
 cd /home/pi
 rm -rf /home/pi/dash_temp/
 
+# loop to keep e2pv running if it fails.
+(
+  while true; do
+    php /var/www/html/e2pv/e2pv.php
+    echo "e2pv.php exited, restarting in 5s..." >&2
+    sleep 5
+  done
+) &
+
+# start cron
 cron
 
 # first arg is `-f` or `--some-option`
