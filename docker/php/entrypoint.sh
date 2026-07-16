@@ -2,6 +2,10 @@
 # build based on https://github.com/docker-library/php/blob/master/8.5/trixie/apache/docker-php-entrypoint
 set -e
 
+echo "sleep to start db"
+# TODO: fix with a proper pg_isready like implementation
+sleep 15
+
 echo "working on temporary dashboard folder"
 
 cd /home/pi
