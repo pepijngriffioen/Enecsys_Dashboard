@@ -87,8 +87,9 @@ rm -rf /home/pi/dash_temp/
 
 # loop to keep e2pv running if it fails.
 (
+  cd /var/www/html/e2pv
   while true; do
-    php /var/www/html/e2pv/e2pv.php
+    php e2pv.php
     echo "e2pv.php exited, restarting in 5s..." >&2
     sleep 5
   done
