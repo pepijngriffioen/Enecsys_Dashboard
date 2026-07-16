@@ -85,6 +85,7 @@ rm mycron8
 cd /home/pi
 rm -rf /home/pi/dash_temp/
 
+cron
 
 # first arg is `-f` or `--some-option`
 if [ "${1#-}" != "$1" ]; then
