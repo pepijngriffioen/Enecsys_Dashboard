@@ -21,6 +21,8 @@ services:
       - mariadb_data:/var/lib/mysql
     env_file:
         - .env
+    environment:
+        - TZ=Europe/Amsterdam
     restart: unless-stopped
 volumes:
   php_data:
